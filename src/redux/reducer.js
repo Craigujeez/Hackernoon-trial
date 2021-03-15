@@ -84,10 +84,10 @@
                 "value": "programming"
               }
             ],
-            "website": "https://bit.ly/3b8DfWr",
-            "text": "Fill HackerEarth Developer Survey 2021 & win Amazon gift vouchers",
-            "link": "https://bit.ly/3b8DfWr",
-            "reactionsCount": 0
+            website: "https://bit.ly/3b8DfWr",
+            text: "Fill HackerEarth Developer Survey 2021 & win Amazon gift vouchers",
+            link: "https://bit.ly/3b8DfWr",
+            reactionsCount: 0
           },
           {
             id: "DeF63pTcXuPYqnkpfWT5",
