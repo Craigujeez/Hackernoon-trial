@@ -1224,6 +1224,14 @@ small{
   margin-left: 15px;
 }
 
+.page-container .bottom-reactions {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
 .footer{
     background-color: rgb(246, 247, 249);
     transition: background-color 200ms ease 0s;

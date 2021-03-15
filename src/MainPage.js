@@ -155,10 +155,47 @@ const MainPAge = () => {
                             </div>
                             <div dangerouslySetInnerHTML={createMarkup()} />
                         </div>
-                        <footer>
-                            <div className="share">
+                        <div class="bottom-reactions">
+                            <div class="StoryReactions__Layout-sc-148l719-0 iGFhHb">
+                                <div class="reactions">
+                                    <label>21</label>
+                                    <div className="emojis">
+                                        <div className="emoji-container">
+                                            <span>2</span>
+                                            <img data-usertype="user" data-emoji="heart" className="emoji not-active" src="https://hackernoon.com/emojis/heart.png"/>
+                                            <img className="emoji-animation icon-1" src="https://hackernoon.com/emojis/heart.png"/>
+                                            <img className="emoji-animation icon-2" src="https://hackernoon.com/emojis/heart.png"/>
+                                            <img className="emoji-animation icon-3" src="https://hackernoon.com/emojis/heart.png"/>
+                                        </div>
+                                        <div className="emoji-container">
+                                            <span>1</span>
+                                            <img data-usertype="user" data-emoji="light" className="emoji not-active" src="https://hackernoon.com/emojis/light.png"/>
+                                            <img className="emoji-animation icon-1" src="https://hackernoon.com/emojis/light.png"/>
+                                            <img class="emoji-animation icon-2" src="https://hackernoon.com/emojis/light.png"/>
+                                            <img class="emoji-animation icon-3" src="https://hackernoon.com/emojis/light.png"/>
+                                        </div>
+                                        <div className="emoji-container">
+                                            <span></span>
+                                            <img data-usertype="user" data-emoji="boat" className="emoji not-active" src="https://hackernoon.com/emojis/boat.png"/>
+                                            <img className="emoji-animation icon-1" src="https://hackernoon.com/emojis/boat.png"/>
+                                            <img className="emoji-animation icon-2" src="https://hackernoon.com/emojis/boat.png"/>
+                                            <img className="emoji-animation icon-3" src="https://hackernoon.com/emojis/boat.png"/>
+                                        </div>
+                                        <div className="emoji-container">
+                                            <span>2</span>
+                                            <img data-usertype="user" data-emoji="money" className="emoji not-active" src="https://hackernoon.com/emojis/money.png"/>
+                                            <img className="emoji-animation icon-1" src="https://hackernoon.com/emojis/money.png"/>
+                                            <img className="emoji-animation icon-2" src="https://hackernoon.com/emojis/money.png"/>
+                                            <img className="emoji-animation icon-3" src="https://hackernoon.com/emojis/money.png"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <footer style={{alignSelf: "right", alignItems: "right"}}>
+                            <div className="share" style={{width:"350px"}}>
                                 Share this story
-                                <div className="SocialLinks-sc-1bbo2b4-0 ejwIzg">
+                                <div className="SocialLinks-sc-1bbo2b4-0 ejwIzg" style={{width:"150px"}}>
                                     <button aria-label="twitter" className="react-share__ShareButton" style={{backgroundColor: 'transparent', border: 'none', padding: '0px', font: 'inherit', color: 'inherit', cursor: 'pointer'}}>
                                         <img src="https://hackernoon.com/social-icons/twitter-new.png" alt="Twitter share icon"/>
                                     </button>
