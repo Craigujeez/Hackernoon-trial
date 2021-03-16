@@ -30,6 +30,7 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   line-height: 1.666;
+  text-size-adjust: 100%;
 }
 
 pre{
@@ -43,6 +44,11 @@ pre{
 
 .fa-bookmark:before {
   content: "\f02e";
+}
+
+.iuhkiuh{
+  display: none !important;
+  transition: all 0.3s ease 0s !important;
 }
 
 
@@ -92,12 +98,25 @@ body.dark-mode {
   color: var(--col-white) !important;
 }
 
+body.dark-mode .bUOwyd{
+  color: var(--col-white) !important;
+}
+
+body.dark-mode .tags a, body.dark-mode .tag a {
+  color: rgb(193, 202, 212);
+  background-color: rgb(33, 36, 40);
+}
+
 body.dark-mode a:not(.cta-button) {
   color: var(--col-white);
 }
 
 .dark-mode .main-nav{
   background-color: rgb(0, 187, 0);
+}
+
+body.dark-mode .footer {
+  background-color: rgb(60, 60, 59) !important;
 }
 
 .page-layout{
@@ -113,6 +132,10 @@ body.dark-mode a:not(.cta-button) {
   z-index: 5;
   transition: transform 200ms ease-in-out 0s;
   transform: translateY(0px);
+}
+
+.header-layout .main-nav > a > img.desktop {
+  display: none;
 }
 
 .main-nav{
@@ -229,25 +252,6 @@ button, [type="button"], [type="reset"], [type="submit"] {
   overflow: hidden;
   cursor: pointer;
   margin-right: 5px;
-}
-
-.light i{
-  position: absolute;
-  transform: translate(-50%, 50px);
-  transition: all 200ms ease-in-out 0s;
-  opacity: 0;
-}
-
-.light i.active{
-  transform: translate(-50%, -50%);
-  opacity: 0.7;
-}
-
-.dark i.active{
-  position: absolute;
-  transform: translate(-50%, 50px);
-  transition: all 200ms ease-in-out 0s;
-  opacity: 0;
 }
 
 .fa, .fas {
@@ -654,8 +658,8 @@ button, [type="button"], [type="reset"], [type="submit"] {
   grid-column: 1 / -1 !important;
 }
 
-.bUOwyd > div {
-  /* display: flex; */
+.bUOwyd > div.wer {
+  display: flex;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: end;
@@ -684,6 +688,10 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 .bUOwyd > div:first-child span {
   margin-left: 10px;
+}
+
+.bUOwyd > div:last-child {
+  justify-self: end;
 }
 
 .bUOwyd .bookmark {
@@ -1209,6 +1217,10 @@ small{
   display: flex;
 }
 
+.ejwIzg img {
+  max-width: 20px;
+}
+
 .page-container footer .share {
   display: flex;
   -webkit-box-pack: end;
@@ -1527,6 +1539,83 @@ small{
   margin-top: 0px;
 }
 
+.gNpmYA {
+  margin: 0px auto;
+  background: rgb(33, 36, 40);
+  border-style: solid;
+  border-width: 16px;
+  border-image: url(https://hackernoon.com/Devimg/hn-ad-green.png) 16 / 1 / 8px stretch;
+  color: rgb(0, 255, 0);
+  font-weight: bold;
+  text-decoration: none;
+  position: relative;
+  line-height: 1.3;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  -webkit-box-align: center;
+  align-items: center;
+}
+
+.jsUkxR {
+  align-content: start;
+  margin-bottom: 0px;
+  grid-row: span 5 / auto;
+  place-items: center start;
+  padding-right: 10px;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  -webkit-box-align: center;
+  display: grid;
+  grid-column: 1 / span 1 !important;
+}
+
+.jsUkxR > a {
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.jsUkxR h3 {
+  margin: 0px;
+  font-size: 1.8rem;
+}
+
+.jsUkxR > a > img {
+  max-width: 75px;
+  object-fit: cover;
+  box-shadow: rgb(194 202 214) 0px 0.2em, rgb(194 202 214) 0px -0.2em, rgb(194 202 214) 0.2em 0px, rgb(194 202 214) -0.2em 0px;
+}
+
+.jsUkxR h3 small {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.gNpmYA a {
+  color: rgb(0, 255, 0);
+}
+
+.gNpmYA .ad {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+.jsUkxR + * {
+  margin-top: 0px;
+}
+
+.gNpmYA .ad i {
+  margin-right: 5px;
+}
+
+.fa-user-astronaut:before {
+  content: "\f4fb";
+}
+
 @media screen and (min-width: 768px){
   body{
     font-size: 2rem;
@@ -1555,6 +1644,10 @@ small{
 
   .header-layout{
       transform: translateY(0px);
+  }
+
+  .header-layout .main-nav > a > img.mobile {
+    display: none;
   }
 
   .main-nav .logo + form + div{
@@ -1621,6 +1714,9 @@ small{
   .lbJLTx {
     font-size: 1.4rem;
   }
+  .jsUkxR {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media screen and (max-width: 1000px){
@@ -1632,7 +1728,7 @@ small{
 
 @media screen and (max-width: 1100px){
   .banner {
-      min-height: 80px;
+      max-height: 80px;
       flex-direction: column;
       align-items: flex-start;
       padding-top: 10px;

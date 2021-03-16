@@ -2,9 +2,9 @@
 import React from 'react';
 import classnames from "classnames";
 
-export const TopNav = (handleToggle,darkmode) => {
+export const TopNav = ({handleToggle,darkmode}) => {
     return ( 
-        <div className="main-nav flex bg-green-light transition duration-200 ease  h-60 items-center">
+        <div className="main-nav" id="main-nav">
             <a className="logo" tabindex="2" href="/">
                 <img src="https://hackernoon.com/hn-logo.png" alt="Hackernoon logo" class="desktop" width="248" height="40" loading="lazy"/>
                 <img src="https://hackernoon.com/hn-icon.png" alt="Hackernoon logo" class="mobile" width="37" height="40" loading="lazy"/>
@@ -18,8 +18,8 @@ export const TopNav = (handleToggle,darkmode) => {
                 <a className="button1 button2">Log in</a>
             </div>
             <button type="button" className={classnames("darkmode-toggle", {light: !darkmode, dark: darkmode})} onClick={handleToggle}>
-                {!darkmode && <i aria-hidden="true" className={classnames("fas fa-sun", {active: !darkmode})}></i>}
-                {darkmode && <i aria-hidden="true" className={classnames("fas fa-moon ", {active: darkmode})}></i>}
+                {darkmode === false && <i aria-hidden="true" className={classnames("fas fa-sun")}></i>}
+                {darkmode && <i aria-hidden="true" className={classnames("fas fa-moon ")}></i>}
             </button>
 
         </div>
@@ -28,7 +28,7 @@ export const TopNav = (handleToggle,darkmode) => {
 
 export const SubNav = () => {
     return ( 
-        <div className="SubNav">
+        <div className="SubNav" id="SubNav">
             <ul className="navlist">
                 <li>
                     <a className="drp" href="https://hackernoon.com/tagged"> Read </a>

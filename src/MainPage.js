@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React from 'react';
+import React,{useEffect} from 'react';
 import {useSelector,useDispatch} from "react-redux";
 import {TopNav,SubNav} from "./components/navs";
 import Footer from "./components/footer";
@@ -11,6 +11,7 @@ const MainPAge = () => {
     const {darkmode,data} = storeData;
     const {markup} = data
     const handleToggle = () => {
+        console.log("here");
         if(!darkmode){
             dispatch({type: SET_DARK_MODE})
             document.body.classList.add("dark-mode")
@@ -22,10 +23,28 @@ const MainPAge = () => {
     function createMarkup() {
         return {__html: markup};
       }
+
+    const OnScroll = (e) => {
+        const currentScrollPos = window.pageYOffset;
+        console.log(currentScrollPos,"current");
+        if (currentScrollPos > 90) {
+            document.getElementById("main-nav").classList.add("iuhkiuh");
+            document.getElementById("SubNav").classList.add("iuhkiuh"); 
+        } else {
+            document.getElementById("main-nav").classList.remove("iuhkiuh");
+            document.getElementById("SubNav").classList.remove("iuhkiuh");
+        }
+    }
+    useEffect(() => {
+        window.addEventListener("scroll",OnScroll)
+        return () => {
+            window.removeEventListener('scroll',OnScroll)
+        }
+    }, [])
     return ( 
         <div className="App">
-            <div className="w-full flex min-h-screen flex-col page-layout">
-                <header className="sticky top-0 z-5 transition duration-200 ease-in-out bg-green-light flex h-60 transform translate-y-0 header-layout">
+            <div className="page-layout">
+                <header className="header-layout">
                     <TopNav handleToggle={handleToggle} darkmode={darkmode}/>
                     <SubNav/>
                     <div className="banner">
@@ -63,15 +82,15 @@ const MainPAge = () => {
                     <div className="page-container">
                         <h1>Step by Step Guide to Create 3 Different Types of Loading Screens in React</h1>
                         <div className="StoryMeta__Layout-sc-1z0kit8-0 bUOwyd">
-                            <div>
-                                <a className="date" href="https://hackernoon.com/archives/2021/02/21"> February 21st 2021{" "} </a>
+                            <div className="wer">
+                                <a className="date" href="https://hackernoon.com/archives/2021/02/21">February 21st 2021</a>
                                 <span className="stat">
-                                    <i aria-hidden="true" className="fas fa-star"> </i> {" "}493{" "} reads
+                                    <i aria-hidden="true" className="fas fa-star"></i> {" "}676{" "} reads
                                 </span>
-                                <button data-tip="Save stories for a rainy day and find them later at <a href='https://app.hackernoon.com/bookmarks'/>https://app.hackernoon.com/bookmarks</a>" data-for="lFthoYgwXZzfpNWyr5FI" data-html="true" data-delay-hide="1000" className="Bookmark__Layout-sc-9eyvkj-0 jBeNHn bookmark  " currentitem="false">
+                                <button data-tip="Save stories for a rainy day and find them later at <a href='https://app.hackernoon.com/bookmarks'/>https://app.hackernoon.com/bookmarks</a>" data-for="lFthoYgwXZzfpNWyr5FI" data-html="true" data-delay-hide="1000" class="Bookmark__Layout-sc-9eyvkj-0 jBeNHn bookmark  " currentitem="false">
                                     <i aria-hidden="true" className="fas fa-bookmark "></i>
-                                    <div className="__react_component_tooltip t56443404-594a-4f0b-b9c9-211461dde3b8 place-top type-dark" id="lFthoYgwXZzfpNWyr5FI" data-id="tooltip" style={{left:"107px",top:"240px"}}>
-                                        Save stories for a rainy day and find them later at <a href="https://app.hackernoon.com/bookmarks">https://app.hackernoon.com/bookmarks</a>
+                                    <div className="__react_component_tooltip tfbd0797d-dc12-48f6-b1d3-98b8f2f6e6ab place-top type-dark" id="lFthoYgwXZzfpNWyr5FI" data-id="tooltip">
+
                                     </div>
                                 </button>
                             </div>
@@ -129,7 +148,7 @@ const MainPAge = () => {
                             <div className="image-container feat">
                                 <div className="FullScreenToggleImage__Layout-yxmb5o-0 fsbpZf">
                                     <div className="fullscreen">
-                                        <img alt="" src="https://hackernoon.com/images/541r0RExUOQ3nFAQs7oJuST9Axf2-g6aq337h.jpeg" style={{marginLeft: "10%"}}/>
+                                        <img alt="" src="https://hackernoon.com/images/541r0RExUOQ3nFAQs7oJuST9Axf2-g6aq337h.jpeg"  style={{marginLeft:"10%"}}/>
                                     </div>
                                 </div>
                             </div>
@@ -155,9 +174,9 @@ const MainPAge = () => {
                             </div>
                             <div dangerouslySetInnerHTML={createMarkup()} />
                         </div>
-                        <div class="bottom-reactions">
-                            <div class="StoryReactions__Layout-sc-148l719-0 iGFhHb">
-                                <div class="reactions">
+                        <div className="bottom-reactions">
+                            <div className="StoryReactions__Layout-sc-148l719-0 iGFhHb">
+                                <div className="reactions">
                                     <label>21</label>
                                     <div className="emojis">
                                         <div className="emoji-container">
@@ -192,10 +211,10 @@ const MainPAge = () => {
                                 </div>
                             </div>
                         </div>
-                        <footer style={{alignSelf: "right", alignItems: "right"}}>
-                            <div className="share" style={{width:"350px"}}>
+                        <footer >
+                            <div className="share">
                                 Share this story
-                                <div className="SocialLinks-sc-1bbo2b4-0 ejwIzg" style={{width:"150px"}}>
+                                <div className="SocialLinks-sc-1bbo2b4-0 ejwIzg" >
                                     <button aria-label="twitter" className="react-share__ShareButton" style={{backgroundColor: 'transparent', border: 'none', padding: '0px', font: 'inherit', color: 'inherit', cursor: 'pointer'}}>
                                         <img src="https://hackernoon.com/social-icons/twitter-new.png" alt="Twitter share icon"/>
                                     </button>
@@ -210,6 +229,22 @@ const MainPAge = () => {
                                     </button>
                                 </div>
                             </div>
+                            <div class="AuthorAd__Layout-sc-17c9hxn-0 gNpmYA">
+                                <div class="Profile__Layout-sc-1j6ysg0-0 jsUkxR profile">
+                                    <a href="https://hackernoon.com/u/codebucks">
+                                        <img src="https://hackernoon.com/images/541r0RExUOQ3nFAQs7oJuST9Axf2-842316b.jpeg" alt="Author profile picture" width="50" height="50" loading="lazy"/>
+                                    </a>
+                                <div>
+                                    <h3>
+                                        <a href="https://hackernoon.com/u/codebucks" class="Link-k8dxie-0 gLHiBQ">@codebucks</a>
+                                        <small>CodeBucks</small>
+                                    </h3>
+                                </div>
+                            </div>
+                            <a class="ad" href="https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA" rel="ugc">
+                                <i class="fas fa-user-astronaut" aria-hidden="true"></i>Subscribe to Learn ReactJS by building!
+                            </a>
+                        </div>
                         </footer>
                         <section className="related-stories">
                             <h4>Related</h4>
