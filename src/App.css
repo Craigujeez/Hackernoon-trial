@@ -51,6 +51,10 @@ pre{
   transition: all 0.3s ease 0s !important;
 }
 
+.dhgdh{
+  display: flex !important;
+}
+
 
 body{
   padding: 0px;
@@ -132,10 +136,6 @@ body.dark-mode .footer {
   z-index: 5;
   transition: transform 200ms ease-in-out 0s;
   transform: translateY(0px);
-}
-
-.header-layout .main-nav > a > img.desktop {
-  display: none;
 }
 
 .main-nav{
@@ -407,7 +407,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   width: 100vw;
   height: 45px;
   background-color: rgb(255, 255, 255);
-  display: flex;
+  display: none;
   -webkit-box-align: center;
   align-items: center;
   -webkit-box-pack: justify;
@@ -417,7 +417,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
   font-family: "IBM Plex Mono", monospace;
   transform: translateY(-100%);
   transition: all 200ms ease-in-out 0s;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .story-nav .title {
@@ -429,6 +429,10 @@ button, [type="button"], [type="reset"], [type="submit"] {
   overflow: hidden;
   font-size: 16px;
   font-weight: bold;
+}
+
+.story-nav .icon img {
+  height: 24px;
 }
 
 .story-nav .icon {
@@ -444,6 +448,11 @@ button, [type="button"], [type="reset"], [type="submit"] {
   background-position: 0px 0px;
   word-break: break-word;
   margin-left: 10px;
+}
+
+.story-nav a.profile:hover {
+  background-image: linear-gradient(transparent 0%, transparent calc(50% - 9px), rgb(0, 255, 0) calc(50% - 9px), rgb(0, 255, 0) 100%);
+  background-position: 0px 100%;
 }
 
 .story-nav .sharing {
@@ -510,6 +519,10 @@ button, [type="button"], [type="reset"], [type="submit"] {
   -webkit-box-align: center;
   align-items: center;
   display: flex !important;
+}
+
+.story-nav .sharing .st-btn img {
+  display: none !important;
 }
 
 .story-nav .sharing .st-btn {
@@ -1646,6 +1659,11 @@ small{
       transform: translateY(0px);
   }
 
+
+  .header-layout .main-nav > a > img.desktop {
+    display: block;
+  }
+
   .header-layout .main-nav > a > img.mobile {
     display: none;
   }
@@ -1734,6 +1752,19 @@ small{
       padding-top: 10px;
       padding-right: 10px;
   }
+}
+
+@media screen and (max-width: 767px){
+  .header-layout .main-nav > a > img.desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 480px){
+  .page-content {
+      padding: 1rem 2rem;
+  }
+
 }
 
   

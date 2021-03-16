@@ -29,10 +29,12 @@ const MainPAge = () => {
         console.log(currentScrollPos,"current");
         if (currentScrollPos > 90) {
             document.getElementById("main-nav").classList.add("iuhkiuh");
-            document.getElementById("SubNav").classList.add("iuhkiuh"); 
+            document.getElementById("SubNav").classList.add("iuhkiuh");
+            document.getElementById("storynav").classList.add("dhgdh");  
         } else {
             document.getElementById("main-nav").classList.remove("iuhkiuh");
             document.getElementById("SubNav").classList.remove("iuhkiuh");
+            document.getElementById("storynav").classList.remove("dhgdh"); 
         }
     }
     useEffect(() => {
@@ -53,7 +55,7 @@ const MainPAge = () => {
                             Join 3500 Developers at Spectra March 17th
                         </a>
                     </div>
-                    <div className="story-nav show">
+                    <div className="story-nav show" style={{marginTop:"40px"}} id="storynav">
                         <div className="title">
                             <a className="icon" href="/">
                             <img src="https://hackernoon.com/hn-icon.png" alt="Hackernoon logo"/>
@@ -82,7 +84,7 @@ const MainPAge = () => {
                     <div className="page-container">
                         <h1>Step by Step Guide to Create 3 Different Types of Loading Screens in React</h1>
                         <div className="StoryMeta__Layout-sc-1z0kit8-0 bUOwyd">
-                            <div className="wer">
+                            <div className="wer" style={{width:"290px"}}>
                                 <a className="date" href="https://hackernoon.com/archives/2021/02/21">February 21st 2021</a>
                                 <span className="stat">
                                     <i aria-hidden="true" className="fas fa-star"></i> {" "}676{" "} reads
