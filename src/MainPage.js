@@ -150,7 +150,7 @@ const MainPAge = () => {
                             <div className="image-container feat">
                                 <div className="FullScreenToggleImage__Layout-yxmb5o-0 fsbpZf">
                                     <div className="fullscreen">
-                                        <img alt="" src="https://hackernoon.com/images/541r0RExUOQ3nFAQs7oJuST9Axf2-g6aq337h.jpeg"  style={{marginLeft:"10%"}}/>
+                                        <img alt="" src="https://hackernoon.com/images/541r0RExUOQ3nFAQs7oJuST9Axf2-g6aq337h.jpeg"/>
                                     </div>
                                 </div>
                             </div>

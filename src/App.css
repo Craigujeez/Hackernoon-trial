@@ -560,6 +560,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 .page-content {
+  overflow: hidden;
   flex: 1 1 0%;
   display: flex;
   -webkit-box-pack: center;
@@ -574,6 +575,22 @@ button, [type="button"], [type="reset"], [type="submit"] {
   margin: 3.5rem auto;
   gap: 3rem 2.5rem;
   grid-template-columns: 1fr;
+}
+
+.dropdwn-nav header::before, .dropdwn-nav header::after{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 1px;
+  background-color: var(--col-light-green);
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+}
+
+.dropdwn-nav header::after{
+  top: unset;
+  bottom: 0;
 }
 
 .page-container .code-container pre {
@@ -1633,6 +1650,10 @@ small{
   content: "\f4fb";
 }
 
+.fullscreen img{
+  margin-left: 10%;
+}
+
 @media screen and (min-width: 768px){
   body{
     font-size: 2rem;
@@ -1762,6 +1783,14 @@ small{
   .header-layout .main-nav > a > img.desktop {
     display: none;
   }
+  .page-container,.bUOwyd{
+    display: block;
+  }
+
+  .fullscreen img{
+    margin-left: 0px;
+  }
+
 }
 
 @media (max-width: 480px){
