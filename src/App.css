@@ -147,6 +147,10 @@ body.dark-mode .footer {
   align-items: center;
 }
 
+.navlist li:hover .dropdwn-nav{
+  display: flex !important;
+}
+
 .logo{
   display: flex;
   margin: 10px auto 10px 20px;
