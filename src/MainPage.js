@@ -11,7 +11,6 @@ const MainPAge = () => {
     const {darkmode,data} = storeData;
     const {markup} = data
     const handleToggle = () => {
-        console.log("here");
         if(!darkmode){
             dispatch({type: SET_DARK_MODE})
             document.body.classList.add("dark-mode")
@@ -26,14 +25,15 @@ const MainPAge = () => {
 
     const OnScroll = (e) => {
         const currentScrollPos = window.pageYOffset;
-        console.log(currentScrollPos,"current");
         if (currentScrollPos > 90) {
             document.getElementById("main-nav").classList.add("iuhkiuh");
-            document.getElementById("SubNav").classList.add("iuhkiuh");
-            document.getElementById("storynav").classList.add("dhgdh");  
+            document.getElementById("SubNav").classList.add("subkdjdj");
+            document.getElementById("banner").classList.add("banneryuhj");
+            document.getElementById("storynav").classList.add("dhgdh");
         } else {
             document.getElementById("main-nav").classList.remove("iuhkiuh");
-            document.getElementById("SubNav").classList.remove("iuhkiuh");
+            document.getElementById("SubNav").classList.remove("subkdjdj");
+            document.getElementById("banner").classList.remove("banneryuhj");
             document.getElementById("storynav").classList.remove("dhgdh"); 
         }
     }
@@ -49,7 +49,7 @@ const MainPAge = () => {
                 <header className="header-layout">
                     <TopNav handleToggle={handleToggle} darkmode={darkmode}/>
                     <SubNav/>
-                    <div className="banner">
+                    <div className="banner" id="banner">
                         <a href="https://bit.ly/2PPkdME" target="_blank" rel="sponsored">
                             <img src="https://hackernoon.com/images/img-8i133ho.png" alt="Particle ad"/>
                             Join 3500 Developers at Spectra March 17th
